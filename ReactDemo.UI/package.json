@@ -1,0 +1,24 @@
+{
+  "name": "ReactDemo.UI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wbp": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.0.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.2"
+  }
+}

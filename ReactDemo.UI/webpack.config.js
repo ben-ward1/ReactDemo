@@ -2,10 +2,11 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './wwwroot/source/app.js',
+    entry: { 'main': './wwwroot/Source/app.js' },
     output: {
         path: path.resolve(__dirname, 'wwwroot/dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: 'dist/'
     },
     mode: 'development',
     plugins: [
@@ -24,7 +25,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-react', '@babel/preset-env']
                     }
             }
         }]

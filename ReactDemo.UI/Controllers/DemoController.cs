@@ -21,5 +21,22 @@ namespace ReactDemo.UI.Controllers
                 return json;
             }
         }
+
+        public string GetDescription(int index)
+        {
+            var DescHelper = new DescriptionHelper();
+
+            switch(index)
+            {
+                case 0:
+                    return DescHelper.PageDescription;
+                case 1:
+                    return DescHelper.SWComponentDescription;
+                case 2:
+                    return DescHelper.WeatherComponentDescription;
+                default:
+                    return "Something went wrong.";
+            }
+        }
     }
 }

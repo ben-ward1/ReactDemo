@@ -9,11 +9,12 @@ import FetchData from './fetchdata';
 import FetchProfile from './swApiCallDemo';
 
 import ES6Lib from './es6codelib';
+import GetDescriptionText from './descriptions';
 
-ReactDOM.render(
-    <Counter />,
-    document.getElementById('basicreactcomponent')
-);
+//ReactDOM.render(
+//    <Counter />,
+//    document.getElementById('basicreactcomponent')
+//);
 
 ReactDOM.render(
     <FetchData />,
@@ -23,6 +24,11 @@ ReactDOM.render(
 ReactDOM.render(
     <FetchProfile />,
     document.getElementById('swCharProfile')
-)
+);
+
+ReactDOM.render(
+    <GetDescriptionText />,
+    document.getElementById('descriptionTextDiv')
+);
 
 module.hot.accept();

@@ -2,11 +2,24 @@
     color: red;
 }
 
+.tblKey {
+    font-weight: bold;
+    width: 35%;
+}
+
+.tblVal {
+    text-align: left;
+}
+
 #swCharProfile {
-    width: 50%;
+    width: 30%;
+}
+
+#swCharProfile table tr td {
 }
 
 table {
     width: inherit;
-    background-color: antiquewhite;
+    background-color: aliceblue;
+    justify-content:center;
 }

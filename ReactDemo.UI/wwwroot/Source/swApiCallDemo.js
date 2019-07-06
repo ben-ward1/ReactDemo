@@ -5,12 +5,12 @@ import 'isomorphic-fetch';
 export default class FetchProfile extends React.Component {
     constructor() {
         super();
-        this.state = { profile: [], loading: true };
+        this.state = { profile: {}, loading: true };
         fetch('/Demo/GetProfile')
+            .then(response => response.json())
             .then(data => {
                 this.setState({ profile: data, loading: false });
             });
-        this.refreshData();
     }
 
     render() {
@@ -18,9 +18,9 @@ export default class FetchProfile extends React.Component {
             : FetchProfile.renderProfile(this.state.profile);
 
         return <div>
-            <h3>Some random Star Wars character from a publicly available api</h3>
-            <button onClick={() => { this.refreshData() }}>Get another profile</button>
+            <h5>Some random Star Wars character from a publicly available api</h5>
             {contents}
+            <button onClick={() => { this.refreshData() }}>Get another profile</button>
         </div>;
     }
 
@@ -34,23 +34,22 @@ export default class FetchProfile extends React.Component {
 
     static renderProfile(profile) {
         return <table className='table'>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Height</th>
-                    <th>Skin Color</th>
-                    <th>Eye color</th>
-                    <th>Birth Year</th>
-                </tr>
-            </thead>
             <tbody>
-                    <tr key={profile.name}>
-                        <td>{profile.name}</td>
-                        <td>{profile.height}</td>
-                        <td>{profile.skin_color}</td>
-                        <td>{profile.eye_color}</td>
-                        <td>{profile.birth_year}</td>
-                    </tr>
+                <tr>
+                    <td className="tblKey">Name</td><td className="tblVal">{profile.name}</td>
+                </tr>
+                <tr>
+                    <td className="tblKey">Height</td><td className="tblVal">{profile.height} cm</td>
+                </tr>
+                <tr>
+                    <td className="tblKey">Skin Color</td><td className="tblVal">{profile.skin_color}</td>
+                </tr>
+                <tr>
+                    <td className="tblKey">Eye Color</td><td className="tblVal">{profile.eye_color}</td>
+                </tr>
+                <tr>
+                    <td className="tblKey">Birth Year</td><td className="tblVal">{profile.birth_year}</td>
+                </tr>
             </tbody>
         </table>
     }

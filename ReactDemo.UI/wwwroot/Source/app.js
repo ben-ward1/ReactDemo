@@ -1,6 +1,4 @@
-﻿//$ = require('jquery');
-
-require('./lib');
+﻿require('./lib');
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/site.css';
 
@@ -8,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './reactcomponent.js';
 import FetchData from './fetchdata';
+import FetchProfile from './swApiCallDemo';
 
 import ES6Lib from './es6codelib';
 
@@ -21,10 +20,9 @@ ReactDOM.render(
     document.getElementById('reactcomponentwithapidata')
 );
 
-//document.getElementById("fillthis").innerHTML = getText();
+ReactDOM.render(
+    <FetchProfile />,
+    document.getElementById('swCharProfile')
+)
 
-//$('#fillthiswithjquery').html('Filled by Jquery!');
-
-//let myES6Object = new ES6Lib();
-//$('#fillthiswithes6lib').html(myES6Object.getData());
 module.hot.accept();

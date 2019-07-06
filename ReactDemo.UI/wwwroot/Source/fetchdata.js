@@ -11,6 +11,7 @@ export default class FetchData extends React.Component {
                 this.setState({ forecasts: data, loading: false });
             });
     }
+
     render() {
         let contents = this.state.loading ? <p><em>Loading...</em></p>
             : FetchData.renderForecastsTable(this.state.forecasts);
@@ -22,6 +23,7 @@ export default class FetchData extends React.Component {
             {contents}
         </div>;
     }
+
     refreshData() {
         fetch('api/SampleData/WeatherForecasts')
             .then(response => response.json())

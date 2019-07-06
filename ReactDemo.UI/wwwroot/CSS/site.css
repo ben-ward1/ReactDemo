@@ -1,3 +1,12 @@
 ﻿h1 {
     color: red;
 }
+
+#swCharProfile {
+    width: 50%;
+}
+
+table {
+    width: inherit;
+    background-color: antiquewhite;
+}

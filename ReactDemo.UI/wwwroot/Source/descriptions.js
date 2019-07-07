@@ -27,7 +27,7 @@ export default class GetDescriptionText extends React.Component {
                 <button className='descriptionBtn' id='weatherDescBtn' onClick={() => { this.refreshData(2) }}>Weather component</button>
                 <button className='descriptionBtn' onClick={() => { this.refreshData(3) }}>Message to Daxko</button>
             </div>
-            <p id='descTextContainer'>{this.state.description}</p>
+            <p id='descTextContainer' dangerouslySetInnerHTML={this.createMarkup()}></p>
             <div id='linksContainer'>
                 <label>Links: </label>
                 <a href='https://github.com/BenjaminEllisWard/ReactDemo'>My source code</a>
@@ -39,6 +39,10 @@ export default class GetDescriptionText extends React.Component {
         </div>;
     }
 
+    createMarkup() {
+        return { __html: this.state.description };
+    }
+
     refreshData(index) {
         fetch('/Demo/GetDescription?index=' + index.toString())
             .then(response => response.text())
@@ -46,9 +50,4 @@ export default class GetDescriptionText extends React.Component {
                 this.setState({ description: data, loading: false });
             });
     }
-
-    //static renderDescription(description) {
-    //    return <p>{description}</p>
-            
-    //}
 }

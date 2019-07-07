@@ -2,6 +2,7 @@
     color: white;
     text-align: center;
     background-color: black;
+    font-weight: 100;
 }
 
 h5 {
@@ -33,8 +34,8 @@ button {
     width: 30%;
 }
 
-#swCharProfile table tr td {
-}
+/*#swCharProfile table tr td {
+}*/
 
 table {
     width: inherit;

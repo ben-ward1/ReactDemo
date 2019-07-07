@@ -1,5 +1,23 @@
 ﻿h1 {
-    color: red;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+h5 {
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.compDiv {
+    padding: 4px;
+    border: solid 1px lightgray;
+}
+
+button {
+    margin-right: 2px;
 }
 
 .tblKey {
@@ -22,4 +40,24 @@ table {
     width: inherit;
     background-color: aliceblue;
     justify-content:center;
+}
+
+#topContainer {
+    display: flex;
+    width: 100%;
+}
+
+#descriptionTextDiv {
+    width: 70%;
+    padding-left: 12px;
+    float: left;
+}
+
+#descHeader {
+    border-bottom: solid 1px lightgray;
+}
+
+label {
+    font-weight: 700;
+    margin-right: 15px;
 }

@@ -31,4 +31,20 @@ ReactDOM.render(
     document.getElementById('descriptionTextDiv')
 );
 
+$('.descriptionBtn').on('click', function () {
+    $('#descTextContainer').css('display', 'none');
+    $('#descTextContainer').fadeIn(750);
+    $('.compDiv').css('box-shadow', 'none');
+    $('.descriptionBtn').css('box-shadow', 'none');
+    $(this).css('box-shadow', '0px 0px 6px 2px lightblue');
+});
+
+$('#swDescBtn').on('click', function () {
+    $('#swCharProfile').css('box-shadow', '0px 0px 6px 2px lightblue');
+});
+
+$('#weatherDescBtn').on('click', function () {
+    $('#reactcomponentwithapidata').css('box-shadow', '0px 0px 6px 2px lightblue');
+});
+
 module.hot.accept();

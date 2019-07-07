@@ -19,12 +19,15 @@ export default class GetDescriptionText extends React.Component {
         //    : (this.state.description);
 
         return <div>
-            <h5>Description</h5>
-            <p>{this.state.description}</p>
-            <button onClick={() => { this.refreshData(0) }}>Page description</button>
-            <button onClick={() => { this.refreshData(1) }}>SW component</button>
-            <button onClick={() => { this.refreshData(2) }}>Weather component</button>
-            <button onClick={() => { this.refreshData(3) }}>Message to Daxko</button>
+            
+            <div id='descHeader'>
+                <label>Descriptions: </label>
+                <button className='descriptionBtn' onClick={() => { this.refreshData(0) }}>Page description</button>
+                <button className='descriptionBtn' id='swDescBtn' onClick={() => { this.refreshData(1) }}>SW component</button>
+                <button className='descriptionBtn' id='weatherDescBtn' onClick={() => { this.refreshData(2) }}>Weather component</button>
+                <button className='descriptionBtn' onClick={() => { this.refreshData(3) }}>Message to Daxko</button>
+            </div>
+            <p id='descTextContainer'>{this.state.description}</p>
         </div>;
     }
 

@@ -61,3 +61,14 @@ label {
     font-weight: 700;
     margin-right: 15px;
 }
+
+#descComponentContainer {
+    height: 100%;
+    position: relative;
+}
+
+#linksContainer {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+}

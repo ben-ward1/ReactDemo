@@ -47,5 +47,8 @@ export default class GetDescriptionText extends React.Component {
             .then(data => {
                 this.setState({ description: data, loading: false });
             });
+
+        $('#descTextContainer').css('display', 'none');
+        $('#descTextContainer').fadeIn(750);
     }
 }

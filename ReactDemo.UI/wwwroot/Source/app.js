@@ -29,8 +29,6 @@ ReactDOM.render(
 /// Description button click support section
 
 $('.descriptionBtn').on('click', function () {
-    $('#descTextContainer').css('display', 'none');
-    $('#descTextContainer').fadeIn(750);
     $('.compDiv').css('box-shadow', 'none');
     $('.descriptionBtn').css('box-shadow', 'none');
     $(this).css('box-shadow', '0px 0px 6px 2px lightblue');

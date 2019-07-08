@@ -34,6 +34,8 @@ namespace ReactDemo.UI.Controllers
                     return DescHelper.SWComponentDescription;
                 case 2:
                     return DescHelper.WeatherComponentDescription;
+                case 3:
+                    return DescHelper.DaxkoMsg;
                 default:
                     return "Something went wrong.";
             }

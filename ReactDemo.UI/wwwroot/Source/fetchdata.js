@@ -18,8 +18,7 @@ export default class FetchData extends React.Component {
 
         return <div>
             <h5>Weather forecast</h5>
-            <button onClick={() => { this.refreshData() }}>Refresh</button>
-            <p>This component demonstrates fetching data from the server.</p>
+            <button id='weatherBtn' onClick={() => { this.refreshData() }}>Refresh</button>
             {contents}
         </div>;
     }

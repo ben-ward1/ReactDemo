@@ -35,9 +35,6 @@ button {
     width: 30%;
 }
 
-/*#swCharProfile table tr td {
-}*/
-
 table {
     width: inherit;
     background-color: aliceblue;
@@ -73,10 +70,6 @@ label {
     right: 0;
     position: absolute;
     bottom: 0;
-}
-
-html {
-    /*background-color: lightsteelblue;*/
 }
 
 body {

@@ -11,11 +11,6 @@ import FetchProfile from './swApiCallDemo';
 import ES6Lib from './es6codelib';
 import GetDescriptionText from './descriptions';
 
-//ReactDOM.render(
-//    <Counter />,
-//    document.getElementById('basicreactcomponent')
-//);
-
 ReactDOM.render(
     <FetchData />,
     document.getElementById('reactcomponentwithapidata')
@@ -31,6 +26,8 @@ ReactDOM.render(
     document.getElementById('descriptionTextDiv')
 );
 
+/// Description button click support section
+
 $('.descriptionBtn').on('click', function () {
     $('#descTextContainer').css('display', 'none');
     $('#descTextContainer').fadeIn(750);
@@ -45,6 +42,13 @@ $('#swDescBtn').on('click', function () {
 
 $('#weatherDescBtn').on('click', function () {
     $('#reactcomponentwithapidata').css('box-shadow', '0px 0px 6px 2px lightblue');
+});
+
+/// End button click support section
+
+// Changes 'Loading...' header
+$(document).ready(function () {
+    $('#mainHeader').html('Ben&#39;s Great React Demo');
 });
 
 module.hot.accept();

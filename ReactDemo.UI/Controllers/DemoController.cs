@@ -15,10 +15,11 @@ namespace ReactDemo.UI.Controllers
         {
             using (var client = new WebClient())
             {
+                // simple http GET
                 var url = "https://swapi.co/api/people/" + RequestHelper.GetInt(1, 15).ToString() + "/?format=json";
-                var json = client.DownloadString(url);
+                var response = client.DownloadString(url);
 
-                return json;
+                return response;
             }
         }
 

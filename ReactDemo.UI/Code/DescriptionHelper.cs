@@ -6,6 +6,9 @@ using System.Web;
 
 namespace ReactDemo.UI.Code
 {
+    /// <summary>
+    /// In a real application, the description data be gotten from a data access layer.
+    /// </summary>
     internal class DescriptionHelper
     {
         public string PageDescription { get; }
@@ -16,6 +19,8 @@ namespace ReactDemo.UI.Code
         public DescriptionHelper()
         {
             // Description HTML strings hardcoded into contructor strictly for demonstration purposes.
+            // A viable alternative to this might be to pass partial views to react components. I'll have
+            // to do some research to see if that is possible.
             this.PageDescription = "<div style='font-size:15px'><p><b>Thanks for taking a look at my app!</b> It's a single page that demonstrates what I learned after trying React.js for the first time 3 days ago. The two main components here are the Star Wars profile table and the Weather forecast. I followed a demo for the weather component, then crafted the SW profile and description components myself.</p><p>The biggest challenge was the initial setup. It took a full day to learn/figure out node.js, npm, webpack, babel, bundling and how to configure it all before I could even begin to create React components. Click on the description buttons to see more details about each component.</p><section><label style='margin-bottom:2px'>Technical caveats: </label><ul><li>This app was not designed with regard to mobile responsiveness.</li><li>The page was purposefully designed for demonstration purposes to fetch almost all data from the server/webAPI in response to click events (even these description messages are fetched from the server with each corresponding click event).</li></ul></section></div>";
             this.SWComponentDescription = "<p><b>What: </b>This component gets a random Star Wars character's profile from a publicly available web api (see link below).</p><p><b>How: </b>It works by calling a controller method from the server which in turn calls a web api and hands the response to the React component. Inspect the DOM tree in the developer tools while clicking the &#39;Get another profile&#39; button to see React updating only the elements that change.</p>";
             this.WeatherComponentDescription = "<p><b>What: </b>This component gives a randomized weather forecast for the next five days</p><p><b>How: </b>Works similarly to the other component, but the data originates from within the application (hardcoded for demonstration purposes). Notice that this component refreshes more quickly than the one above after clicking the button. As with the other component, inspect the DOM tree while clicking the refresh button to see React update only the elements that change.</p>";

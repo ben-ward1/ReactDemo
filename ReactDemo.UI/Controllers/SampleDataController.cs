@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ReactDemo.UI.Controllers
 {
+    /// <summary>
+    /// All this code is jammed into the controller because that is the way it was done in the 
+    /// demo I was initially following. If I was doing this for real, this data would come from
+    /// a service or data access layer.
+    /// </summary>
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
